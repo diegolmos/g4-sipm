@@ -1,30 +1,22 @@
-/control/verbose 2
-/run/verbose 2
-/event/verbose 0
-
-# Abrir visualización con OpenGL Qt
-/vis/open OGLSQt
-/vis/scene/create
-/vis/sceneHandler/create
-/vis/viewer/create
-/vis/scene/add/volume
-#/vis/drawVolume
-
-/vis/viewer/set/viewpointThetaPhi 60 30
-/vis/viewer/set/style surface
-/vis/scene/add/axes 0 0 0 10 cm
-
-# Mostrar trayectorias por tipo de partícula
-/vis/modeling/trajectories/create/drawByParticleID
-/vis/modeling/trajectories/drawByParticleID-0/set mu- green
-/vis/modeling/trajectories/drawByParticleID-0/set optical yellow
-
-/vis/scene/add/trajectories
-/vis/scene/add/hits
-/vis/scene/endOfEventAction accumulate
-/vis/scene/endOfRunAction accumulate
 
 /run/initialize
-/run/beamOn 1000
-/vis/viewer/flush
 
+#visualizacion
+/vis/open OGLSQt 600x600-0+0
+/vis/drawVolume
+
+#ajustes de cámara y estilo
+/vis/viewer/set/viewpointThetaPhi 45 45
+/vis/viewer/set/style wireframe
+/vis/viewer/set/autoRefresh true
+
+#elementos visuales
+/vis/scene/add/trajectories smooth
+/vis/scene/add/hits
+/vis/scene/add/axes 0 0 0 10 cm
+
+#refrescar en cada evento para evitar lag
+/vis/scene/endOfEventAction refresh
+
+#1 evento para verificar
+/run/beamOn 1

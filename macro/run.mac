@@ -1,4 +1,14 @@
-# macros/run.mac
+# Inicializar el kernel
 /run/initialize
-/run/beamOn 10
 
+# Desactivar visualización para máxima velocidad
+/control/verbose 0
+/run/verbose 1
+/event/verbose 0
+
+# Configuración del haz (opcional, si no está en el código C++)
+# /gun/particle mu-
+# /gun/energy 4 GeV
+
+# Ejecutar la simulación de producción
+/run/beamOn 50
