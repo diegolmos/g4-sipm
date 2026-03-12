@@ -1,0 +1,4 @@
+# macros/run.mac
+/run/initialize
+/run/beamOn 10
+

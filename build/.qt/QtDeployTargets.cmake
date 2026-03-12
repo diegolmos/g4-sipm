@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_xyplane_sim_FILE /Users/diego/Downloads/simple_g4sim_scint_sipm-master/build/xyplane_sim)
+set(__QT_DEPLOY_TARGET_xyplane_sim_TYPE EXECUTABLE)

@@ -1,0 +1,42 @@
+# =========================
+# Visualization macro (safe)
+# =========================
+
+/vis/open OGLSQt
+
+/vis/drawVolume
+
+/vis/viewer/set/viewpointThetaPhi 60 30
+/vis/viewer/set/style surface
+/vis/scene/add/axes 0 0 0 10 cm
+
+# --- Trajectories: color by particle type ---
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/drawByParticleID-0/set mu- green
+/vis/modeling/trajectories/drawByParticleID-0/set optical yellow
+
+# IMPORTANT:
+# Drawing optical photons is extremely heavy. Keep it OFF by default.
+# Enable it manually only for 1 event if you really need it.
+
+# Show trajectories (mu- only by default via filter)
+# Create a filter to draw only mu- trajectories:
+/vis/filtering/trajectories/create/particleFilter
+/vis/filtering/trajectories/particleFilter-0/add mu-
+/vis/scene/add/trajectories smooth
+
+# Hits visualization is also heavy; keep it OFF unless needed
+#/vis/scene/add/hits
+
+# Do NOT accumulate events/runs (accumulate = freeze)
+#/vis/scene/endOfEventAction accumulate
+#/vis/scene/endOfRunAction accumulate
+/vis/scene/endOfEventAction refresh
+
+/run/initialize
+/vis/viewer/flush
+
+# Do NOT beamOn here. Run events manually in the UI:
+#   /run/beamOn 1
+# or execute another macro for batch runs.
+

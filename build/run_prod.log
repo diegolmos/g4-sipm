@@ -1,0 +1,164 @@
+
+**************************************************************
+ Geant4 version Name: geant4-11-04 [MT]   (5-December-2025)
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+<<< Geant4 Physics List simulation engine: FTFP_BERT
+
+>>>>>>>>>>>>>>>>>>>>branch sipm added
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Registered graphics systems are:
+  ASCIITree (ATree)
+  DAWNFILE (DAWNFILE)
+  RayTracer (RT)
+  VRML2FILE (VRML2FILE)
+  gMocrenFile (gMocrenFile)
+  TOOLSSG_OFFSCREEN (TSG_OFFSCREEN, TSG_FILE)
+  OpenGLImmediateQt (OGLIQt, OGLI)
+  OpenGLStoredQt (OGLSQt, OGLS)
+  RayTracerQt (RTQt)
+  TOOLSSG_QT_GLES (TSG_QT_GLES, TSGQt, TSG, OGL)
+  TOOLSSG_QT_ZB (TSG_QT_ZB, TSGQtZB, TSGZB)
+You may choose a graphics system (driver) with a parameter of
+the command "/vis/open" or "/vis/sceneHandler/create",
+or you may omit the driver parameter and choose at run time:
+- by argument in the construction of G4VisExecutive;
+- by environment variable "G4VIS_DEFAULT_DRIVER";
+- by entry in "~/.g4session";
+- by build flags.
+- Note: This feature is not allowed in batch mode.
+For further information see "examples/basic/B1/exampleB1.cc"
+and "vis.mac".
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByAttribute
+  drawByCharge
+  drawByOriginVolume
+  drawByParticleID
+  drawByEncounteredVolume
+
+Registered models:
+  None
+
+Registered filter factories:
+  attributeFilter
+  chargeFilter
+  originVolumeFilter
+  particleFilter
+  encounteredVolumeFilter
+
+Registered filters:
+  None
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+"/vis/list" to see available colours.
+/run/verbose 1
+/event/verbose 0
+/tracking/verbose 0
+/run/initialize
+### G4PhysicsVector: spline cannot be used for 3 points - spline disabled
+2.034e-06   1.58
+3e-06   1.58
+4.136e-06   1.58
+### G4PhysicsVector: spline cannot be used for 3 points - spline disabled
+2.034e-06   3448
+3e-06   8500
+4.136e-06   14500
+### G4PhysicsVector: spline cannot be used for 3 points - spline disabled
+2.034e-06   1.58
+3e-06   1.58
+4.136e-06   1.58
+Checking overlaps for volume Scintillator:0 (G4Box) ... OK! 
+Checking overlaps for volume SiPM:0 (G4Box) ... OK! 
+>>>> optical surface between Scintillator and SiPM found! -- sipm 0
+Checking overlaps for volume SiPM:1 (G4Box) ... OK! 
+>>>> optical surface between Scintillator and SiPM found! -- sipm 1
+Checking overlaps for volume SiPM:2 (G4Box) ... OK! 
+>>>> optical surface between Scintillator and SiPM found! -- sipm 2
+Checking overlaps for volume SiPM:3 (G4Box) ... OK! 
+>>>> optical surface between Scintillator and SiPM found! -- sipm 3
+key/value -- 0/0x600002f65590
+key/value -- 1/0x600002f65630
+key/value -- 2/0x600002f656d0
+key/value -- 3/0x600002f65770
+>>>>> DETECTIONEFFICIENCY:
+  E = 1.31898 eV -> 0.001
+  E = 1.34765 eV -> 0.004
+  E = 1.3776 eV -> 0.008
+  E = 1.40891 eV -> 0.01
+  E = 1.44168 eV -> 0.015
+  E = 1.476 eV -> 0.02
+  E = 1.512 eV -> 0.025
+  E = 1.5498 eV -> 0.03
+  E = 1.58954 eV -> 0.04
+  E = 1.63137 eV -> 0.05
+  E = 1.67546 eV -> 0.06
+  E = 1.722 eV -> 0.08
+  E = 1.7712 eV -> 0.1
+  E = 1.8233 eV -> 0.12
+  E = 1.87855 eV -> 0.15
+  E = 1.93725 eV -> 0.18
+  E = 1.99975 eV -> 0.21
+  E = 2.0664 eV -> 0.24
+  E = 2.13766 eV -> 0.28
+  E = 2.214 eV -> 0.31
+  E = 2.296 eV -> 0.34
+  E = 2.38431 eV -> 0.37
+  E = 2.47968 eV -> 0.39
+  E = 2.583 eV -> 0.403
+  E = 2.69531 eV -> 0.405
+  E = 2.81782 eV -> 0.4
+  E = 2.952 eV -> 0.38
+  E = 3.0996 eV -> 0.33
+  E = 3.26274 eV -> 0.26
+  E = 3.44401 eV -> 0.18
+  E = 3.64659 eV -> 0.12
+  E = 3.87451 eV -> 0.05
+  E = 4.13281 eV -> 0
+
+ hInelastic FTFP_BERT : threshold between BERT and FTFP is over the interval 
+ for pions :   3 to 6 GeV
+ for kaons :   3 to 6 GeV
+ for proton :  3 to 6 GeV
+ for neutron : 3 to 6 GeV
+
+### Adding tracking cuts for neutron  TimeCut(ns)= 10000  KinEnergyCut(MeV)= 0
+### Birks coefficients used in run time
+/run/printProgress 1000
+/run/numberOfThreads 4
+***** Illegal application state </run/numberOfThreads 4> *****
+
+***** Batch is interrupted!! *****
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : UIMAN0123
+      issued by : G4UImanager::ApplyCommand
+Command aborted (200)
+Error code : 200
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Graphics systems deleted.
+Visualization Manager deleting...
+================== Deleting memory pools ===================
+Number of memory pools allocated: 3; of which, static: 0
+Dynamic pools deleted: 3 / Total memory freed: 0.0048 MB
+============================================================
